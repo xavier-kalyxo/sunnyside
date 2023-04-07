@@ -17,21 +17,21 @@
     <nav>
       <img src="./images/logo.svg" width="150" height="29.03" alt="sunnyside logo" class="logo">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="hamburger-menu" aria-label="Menu" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
-      <ul style="display: none;">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="mobile-menu" style="display: none;">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <h1 data-aos="fade-in">We are creatives</h1>
@@ -76,9 +76,9 @@
       </div>
     </section><!-- section.squares -->
     <section class="testimonials">
-      <h2>Client testimonials</h2>
+      <h2 data-aos="fade-left">Client testimonials</h2>
       <div class="row">
-        <div class="col">
+        <div class="col" data-aos="zoom-in-up">
           <img src="./images/image-emily.jpg" alt="Emily" class="testimonial-photo">
           <p class="testimonial-text">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
           <p class="testimonial-author">
@@ -86,7 +86,7 @@
             <span class="title">Marketing Director</span>
           </p>
         </div><!-- .col -->
-        <div class="col">
+        <div class="col" data-aos="zoom-in-up">
           <img src="./images/image-thomas.jpg" alt="Thomas" class="testimonial-photo">
           <p class="testimonial-text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
           <p class="testimonial-author">
@@ -94,7 +94,7 @@
             <span class="title">Chief Operating Officer</span>
           </p>
         </div><!-- .col -->
-        <div class="col">
+        <div class="col" data-aos="zoom-in-up">
           <img src="./images/image-jennie.jpg" alt="Jennie" class="testimonial-photo">
           <p class="testimonial-text">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
           <p class="testimonial-author">
@@ -188,4 +188,8 @@
     duration: 1000,
     once: true
   });
+
+  document.querySelector('.hamburger-menu').addEventListener('click', function (e) {
+    document.querySelector('.mobile-menu').classList.toggle('active');
+  })
 </script>
