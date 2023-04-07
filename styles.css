@@ -62,6 +62,17 @@
     z-index: 100;
 
   }  
+
+  header nav ul.mobile-menu:before {
+    content: "\A";
+    border-style: solid;
+    border-width: 30px 25px 0px 0;
+    border-color: transparent var(--white) transparent transparent;
+    position: absolute;
+    top: -30px;
+    right: 0;
+  }
+
   header nav ul.mobile-menu li:last-of-type {
     margin-top: 35px;
   }
